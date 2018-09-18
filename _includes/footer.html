@@ -1,0 +1,21 @@
+<!-- Footer -->
+<footer id="footer">
+  <p>&copy; {% assign thisyear = site.time | date: "%Y" %}
+    {% if site.first_published %}
+      {% capture diff %}{{ site.first_published | minus:thisyear }}{% endcapture %}
+      {% if diff contains '-' %}{{ site.first_published }},{% endif %}
+    {% endif %}
+    {{ thisyear }}
+    </p>
+</footer>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2528883-12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2528883-12');
+</script>
+
